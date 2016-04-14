@@ -142,7 +142,7 @@ cdef inline TreeDictIterator newTreeDictIterator(
 ################################################################################
 # A few global helper functions dealing with name checking
 
-cdef object _string_name_validator = re.compile(r'\A[a-zA-Z_]\w*\Z')
+cdef object _string_name_validator = re.compile(r'\A[a-zA-Z_][\w-]*\Z')
 cdef object _string_name_validator_match = _string_name_validator.match
 
 cdef inline checkKeyNotNone(str n):
